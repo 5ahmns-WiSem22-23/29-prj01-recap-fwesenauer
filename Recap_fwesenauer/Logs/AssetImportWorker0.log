@@ -176,3 +176,4 @@ Received Import Request.
 Start importing Assets/CameraScript.cs using Guid(eb7f89bddb6405d45b84a750f194de77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca494b00c36f440f67cdb5323608c182') in 0.020246 seconds 
   Import took 0.025526 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
