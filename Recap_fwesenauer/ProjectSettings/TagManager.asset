@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Present
   - Goal
+  - Obstacle
+  - PowerUP
   layers:
   - Default
   - TransparentFX
