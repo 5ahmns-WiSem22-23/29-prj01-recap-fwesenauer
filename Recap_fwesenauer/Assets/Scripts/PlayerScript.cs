@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
-    public int speed = 5;
+    public int speed = 7;
+    public int power = 5;
     public Text playerStatus;
     public GameObject PowerUpObject;
 
@@ -46,7 +47,7 @@ public class PlayerScript : MonoBehaviour
         {
             StartCoroutine(SpeedUp());
             SpawnPowerUp();
-            Destroy(PowerUpObject);
+            
         }
     }
 
@@ -59,18 +60,18 @@ public class PlayerScript : MonoBehaviour
     }
     private IEnumerator SpeedUp()
     {
-        rb.velocity *= speedBoost; 
+        speed += power;
         playerStatus.text = "speedUp";
-        yield return new WaitForSeconds(duration); 
-        rb.velocity /= speedBoost; 
+        yield return new WaitForSeconds(duration);
+        speed -= power;
         playerStatus.text = " ";
     }
     private IEnumerator SlowDown()
     {
-        rb.velocity *= slowDown; 
+        speed -= power;
         playerStatus.text = "slowDown";
-        yield return new WaitForSeconds(duration); 
-        rb.velocity /= slowDown; 
+        yield return new WaitForSeconds(duration);
+        speed += power;
         playerStatus.text = "   ";
     }
 
